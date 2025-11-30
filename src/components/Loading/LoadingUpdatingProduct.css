@@ -1,0 +1,28 @@
+.loading-wrapper {
+    width: 25%;
+    height: 25%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: #f7f7f7;
+    color: #333;
+    font-size: clamp(14px, 2vw, 20px);
+}
+
+/* Spinner = 10% of parent width */
+.spinner {
+    width: 25%;
+    aspect-ratio: 1;              /* keeps perfect circle */
+    border: 0.12em solid #ddd;
+    border-top-color: #4a90e2;
+    border-radius: 50%;
+    animation: spin 0.9s linear infinite;
+    margin-bottom: 1rem;
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}

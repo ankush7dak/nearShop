@@ -1,0 +1,156 @@
+/* Main grid */
+.productList-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 20px;
+  padding: 20px;
+}
+
+/* Individual Card */
+.productList-card {
+  background: #ffffff;
+  padding: 16px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+  transition: 0.2s ease;
+}
+
+.productList-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.12);
+}
+
+/* Product Name */
+.productList-name {
+  font-size: 1.3rem;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+/* Category */
+.productList-category {
+  font-size: 0.9rem;
+  color: #555;
+  margin-bottom: 8px;
+}
+
+/* Price */
+.productList-price {
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: #222;
+  margin-bottom: 12px;
+}
+
+/* Stock View */
+.productList-stock {
+  font-size: 1rem;
+  margin-bottom: 10px;
+}
+
+.productList-stock span {
+  font-weight: bold;
+  color: #c0392b;
+}
+
+/* Stock Edit Section */
+.productList-stock-edit-section {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 10px;
+}
+
+.productList-stock-input,
+.productList-edit-input {
+  width: 70px;
+  padding: 6px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-size: 1rem;
+}
+
+.productList-qty-btn {
+  width: 32px;
+  height: 32px;
+  border: none;
+  font-size: 1.1rem;
+  cursor: pointer;
+  border-radius: 8px;
+  background-color: #f0f0f0;
+  transition: 0.2s;
+}
+
+.productList-qty-btn:hover {
+  background-color: #ddd;
+}
+
+/* Shop Name */
+.productList-shop-name {
+  font-size: 0.9rem;
+  color: #666;
+  margin-bottom: 10px;
+}
+
+/* Messages */
+.productList-msg-success {
+  color: green;
+  font-size: 0.9rem;
+  font-weight: 600;
+  margin: 8px 0;
+}
+
+.productList-msg-error {
+  color: red;
+  font-size: 0.9rem;
+  font-weight: 600;
+  margin: 8px 0;
+}
+
+/* Buttons */
+.productList-update-btn,
+.productList-save-btn,
+.productList-cancel-btn {
+  padding: 8px 14px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  font-size: 0.9rem;
+  font-weight: 600;
+  margin-right: 8px;
+  transition: 0.2s ease;
+}
+
+.productList-update-btn {
+  background-color: #4b7bec;
+  color: white;
+}
+
+.productList-update-btn:hover {
+  background-color: #3867d6;
+}
+
+.productList-save-btn {
+  background-color: #20bf6b;
+  color: white;
+}
+
+.productList-save-btn:hover {
+  background-color: #0fbf5c;
+}
+
+.productList-cancel-btn {
+  background-color: #eb3b5a;
+  color: white;
+}
+
+.productList-cancel-btn:hover {
+  background-color: #d32f45;
+}
+
+/* Actions Container */
+.productList-edit-actions {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+}

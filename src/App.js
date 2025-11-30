@@ -1,24 +1,31 @@
 import logo from './logo.svg';
 import './App.css';
+import Login from './components/Login/Login';
+import { Routes, Route } from "react-router-dom";
+import ProductListView from './components/products/ProductListView';
+import HamburgerMenu from './components/Hamburger/HamburgerMenu'
+import UserProvider from './contexts/Context';
+import Logout from './components/Login/Logout';
+import AddProduct from './components/products/AddProductScreen/AddProduct';
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+  return (<>
+  {/* <UserProvider> */}
+  {/* <HamburgerMenu /> */}
+  <Routes>
+    <Route path="/" element={<Login />} />
+    <Route path="/login" element={<Login />} />
+    <Route path="/Logout" element={<UserProvider>
+                                      <Logout />
+                                  </UserProvider>} />
+    <Route path="/products" element= {<UserProvider>
+                                          <ProductListView/>  
+                                      </UserProvider>}/>
+    <Route path="/add-product" element = {<AddProduct />} />
+    
+  </Routes>
+  {/* </UserProvider> */}
+  </>
   );
 }
 
